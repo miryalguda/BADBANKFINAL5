@@ -4,8 +4,11 @@
   "description": "",
   "main": "index2.js",
   "scripts": {
+    "start": "node backend/index2.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev" : "nodemon -L index2.js"
+    "dev" : "nodemon -L index2.js",
+
+    "heroku-postbuild": "NPM-CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
   "keywords": [],
   "author": "",

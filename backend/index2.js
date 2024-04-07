@@ -185,12 +185,12 @@ app.get("/gettrans", (req, res) => {
    
  }); 
   */
-
- app.use (express.static("./frontend/build"))
+if (process.env.NODE_ENV === "production"){
+ app.use(express.static(path.join("frontend/build")))
  app.get("*", (req, res) => {
    res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"))
- })
-
+ });
+}
 /*
 const __dirname = path.dirname("");
 const buildpath = path.join (_dirname, "../client/build")
