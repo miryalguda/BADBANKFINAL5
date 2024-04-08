@@ -1,23 +1,17 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
   "main": "index2.js",
   "scripts": {
     "start": "node backend/index2.js",
     "build": "npm install",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev" : "nodemon  index2.js",
-
+    "dev": "nodemon  index2.js",
     "heroku-postbuild": "NPM-CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
-
   "engines": {
-
     "node": "21.x"
-
   },
-
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -31,5 +25,6 @@
     "mongodb": "^6.5.0",
     "mongoose": "^8.2.4",
     "nodemon": "^3.1.0"
-  }
+  },
+  "description": ""
 }
