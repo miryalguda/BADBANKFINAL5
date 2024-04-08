@@ -5,11 +5,19 @@
   "main": "index2.js",
   "scripts": {
     "start": "node backend/index2.js",
+    "build": "npm install",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev" : "nodemon -L index2.js",
+    "dev" : "nodemon  index2.js",
 
     "heroku-postbuild": "NPM-CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
+
+  "engines": {
+
+    "node": "21.x"
+
+  },
+
   "keywords": [],
   "author": "",
   "license": "ISC",
